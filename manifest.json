@@ -1,0 +1,19 @@
+{
+
+    "manifest_version": 2,
+    "name": "D365 Tools",
+    "version": "2.3",
+  
+    "description": "Adds context menu options to interface with Dynamics 365 UUI and API such as show the names of controls on a form.",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["assets/micromodal.min.js"]
+      }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+      },
+    "permissions": ["contextMenus", "activeTab", "clipboardWrite" ]
+  
+  }
